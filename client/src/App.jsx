@@ -5,7 +5,6 @@ import Loader from "./components/Loader";
 import { api } from "./services/api";
 
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Separator } from "@/components/ui/separator";
 import { Toaster } from "@/components/ui/sonner";
 
 export default function App() {

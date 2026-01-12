@@ -131,34 +131,34 @@ export default function UrlForm({ onSubmit, loading }) {
               </div>
 
               <div className="rounded-sm border border-white/10 bg-white/3 p-4">
-                <div className="mb-2 flex items-center justify-between">
-                  <div className="flex gap-4 items-center">
+                <div className="mb-2 flex items-center justify-between flex-wrap">
+                  <div className="flex gap-4 items-center flex-wrap">
                     <p className="text-sm font-medium text-zinc-200">
-                    Extraction Method
-                  </p>
+                      Extraction Method
+                    </p>
 
-                  <Select value={method} onValueChange={setMethod} disabled={loading}>
-                  <SelectTrigger className="h-12 rounded-sm bg-zinc-950/60 border-white/10 focus:ring-indigo-500/20 cursor-pointer ring-0!">
-                    <SelectValue placeholder="Choose method" />
-                  </SelectTrigger>
+                    <Select value={method} onValueChange={setMethod} disabled={loading}>
+                    <SelectTrigger className="h-12 rounded-sm bg-zinc-950/60 border-white/10 focus:ring-indigo-500/20 cursor-pointer ring-0!">
+                      <SelectValue placeholder="Choose method" />
+                    </SelectTrigger>
 
-                  <SelectContent className=" border-white/10 text-white rounded-sm bg-white/3 backdrop-blur-xl">
-                    <SelectItem className="cursor-pointer" value="puppeteer">
-                      Puppeteer
-                    </SelectItem>
-                    <SelectItem className="cursor-pointer" value="cheerio">
-                      Cheerio
-                    </SelectItem>
-                  </SelectContent>
-                </Select>
+                    <SelectContent className=" border-white/10 text-white rounded-sm bg-white/3 backdrop-blur-xl">
+                      <SelectItem className="cursor-pointer" value="puppeteer">
+                        Puppeteer
+                      </SelectItem>
+                      <SelectItem className="cursor-pointer" value="cheerio">
+                        Cheerio
+                      </SelectItem>
+                    </SelectContent>
+                    </Select>
                   </div>
 
                   {methodMeta.recommended ? (
-                    <Badge className="border border-indigo-500/30 bg-indigo-500/10 text-indigo-200">
+                    <Badge className="border mt-2 ml-2 border-indigo-500/30 bg-indigo-500/10 text-indigo-200">
                       Recommended
                     </Badge>
                   ) : (
-                    <Badge className="border-white/10 bg-white/5 text-zinc-200">
+                    <Badge className="border mt-2 ml-2 border-white/10 bg-white/5 text-zinc-200">
                       Fast
                     </Badge>
                   )}
