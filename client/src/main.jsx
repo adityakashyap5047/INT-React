@@ -5,6 +5,8 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <div className="dark min-h-screen bg-background text-foreground">
+      <App />
+    </div>
   </StrictMode>,
 )

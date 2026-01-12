@@ -48,10 +48,9 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-foreground">
       <Toaster richColors />
 
-      {/* Header */}
       <header className="border-b">
         <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
           <div className="flex items-center gap-3">
@@ -72,15 +71,14 @@ export default function App() {
         </div>
       </header>
 
-      {/* Main */}
-      <main className="mx-auto flex max-w-5xl flex-col gap-6 px-4 py-10">
+      <main className="flex justify-center items-center flex-col gap-6 px-4 py-10">
         <UrlForm onSubmit={handleSummarize} loading={loading} />
 
         {loading ? <Loader /> : null}
 
         {error ? (
           <Alert variant="destructive" className="w-full max-w-2xl">
-            <AlertTitle>❌ Error</AlertTitle>
+            <AlertTitle>Error</AlertTitle>
             <AlertDescription>{error}</AlertDescription>
           </Alert>
         ) : null}
@@ -90,14 +88,6 @@ export default function App() {
           url={meta.url}
           extractedChars={meta.extractedChars}
         />
-
-        <Separator className="w-full max-w-2xl" />
-
-        <p className="w-full max-w-2xl text-xs text-muted-foreground">
-          Tip: Use <span className="font-semibold">Puppeteer</span> for React /
-          Next websites. Use <span className="font-semibold">Cheerio</span> for
-          static HTML pages.
-        </p>
       </main>
     </div>
   );
