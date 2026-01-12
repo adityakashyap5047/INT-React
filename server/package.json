@@ -1,0 +1,32 @@
+{
+  "name": "react-int",
+  "version": "1.0.0",
+  "description": "A React App for website summarizer",
+  "homepage": "https://github.com/adityakashyap5047/INT-React#readme",
+  "bugs": {
+    "url": "https://github.com/adityakashyap5047/INT-React/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adityakashyap5047/INT-React.git"
+  },
+  "license": "ISC",
+  "author": "Aditya Kumar",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "@langchain/community": "^1.1.3",
+    "@langchain/core": "^1.1.12",
+    "cheerio": "^1.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "openai": "^6.16.0",
+    "puppeteer": "^24.35.0",
+    "zod": "^4.3.5"
+  }
+}
