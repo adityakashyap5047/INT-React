@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { toast } from "sonner";
-import { Copy, Check, Link2, Sparkles, FileText } from "lucide-react";
+import { Copy, Check, Link2, FileText } from "lucide-react";
 
 export default function SummaryCard({ summary, url, extractedChars }) {
   const [copied, setCopied] = useState(false);

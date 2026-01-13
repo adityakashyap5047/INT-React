@@ -8,6 +8,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Toaster } from "@/components/ui/sonner";
 
 import { SiReact, SiLangchain, SiOpenai, SiShadcnui } from "react-icons/si";
+import { toast } from "sonner";
 
 export default function App() {
   const [loading, setLoading] = useState(false);
@@ -25,26 +26,29 @@ export default function App() {
       return;
     }
 
+    let toastId;
     try {
       setLoading(true);
-
+      toastId = toast.loading("Summarizing...");
       const res = await api.post("/api/summarize", {
         url,
         method,
         maxChars: 8000,
       });
-
       setSummary(res.data.summary);
       setMeta({
         url: res.data.url,
         extractedChars: res.data.extractedChars,
       });
+      toast.success("Summarized!")
     } catch (err) {
       setError(
         err?.response?.data?.message || "Something went wrong. Please try again."
       );
+      toast.error(err?.response?.data?.message || "Something went wrong. Please try again.");
     } finally {
       setLoading(false);
+      toast.dismiss(toastId);
     }
   };
 
