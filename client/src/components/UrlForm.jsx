@@ -47,7 +47,7 @@ export default function UrlForm({ onSubmit, loading }) {
   return (
     <div className="w-full max-w-3xl">
       <div className="relative rounded-md bg-linear-to-br from-indigo-500/30 via-purple-500/20 to-amber-500/20 p-px shadow-2xl">
-        <div className="pointer-events-none absolute -inset-10 bg-indigo-500/10 blur-3xl" />
+        <div className="pointer-events-none absolute bg-indigo-500/10 blur-3xl" />
 
         <Card className="relative overflow-hidden rounded-md border-white/10 bg-zinc-950/70 backdrop-blur-xl">
           <div className="pointer-events-none absolute inset-0 opacity-60">
